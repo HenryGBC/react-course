@@ -5,6 +5,7 @@ var Link = require('react-router').Link;
 var UserDetails = require('./UserDetails');
 var UserDetailsWrapper = require('./UserDetailsWrapper');
 var MainContainer = require('./MainContainer');
+var Loading = require('./Loading');
 
 function puke(obj){
 	return <pre>{JSON.stringify(obj, null, ' ')} </pre>
@@ -13,7 +14,7 @@ function puke(obj){
 
 function ConfirmBattle (props){
   return props.isLoading === true 
-    ? <p> Loadinnnnng.....  </p>
+    ? <Loading spped={800} text='Wait one Moment'/>
     : <MainContainer> 
     	<h1>Confirm Battle </h1>
     	<div className='col-sm-8 col-sm-offset-2'>
